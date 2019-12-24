@@ -27,11 +27,13 @@
       onGoMdEvent(){
         // this.$router.push(`${process.env.VUE_APP_BASE_API}/#/docs`)
         const domain = document.domain
-        this.$router.push(`${domain}/docs`)
+        // this.$router.push(`${domain}/docs`)
+        window.location.href = `${domain}/docs/README.html`
       },
       onGoMdEvent1(){
         const domain = document.domain
-        this.$router.push(`${domain}/docs/doc/test1.html`)
+        // this.$router.push(`${domain}/docs/doc/test1.html`)
+        window.location.href = `${domain}/docs/doc/test1.html`
         // window.location.href = `/#/docs/doc/test1.html`
       },
     },

@@ -1,6 +1,10 @@
 <template>
   <div class="app-container">
     <el-button @click="onGoMdEvent">测试跳转</el-button>
+    <el-button @click="onGoMdEvent">测试跳转</el-button>
+    <el-button @click="onGoMdEvent">测试跳转</el-button>
+    <el-button @click="onGoMdEvent">测试跳转</el-button>
+    <el-button @click="onGoMdEvent">测试跳转</el-button>
   </div>
 </template>
 

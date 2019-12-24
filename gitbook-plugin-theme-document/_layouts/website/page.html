@@ -1,0 +1,122 @@
+{% extends "./layout.html" %}
+
+{% block title %}{{ page.title }} · {{ super() }}{% endblock %}
+
+{% block description %}{{ page.description }}{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    {% if page.next and page.next.path %}
+    <link rel="next" href="{{ page.next.path|resolveFile }}" />
+    {% endif %}
+    {% if page.previous and page.previous.path %}
+    <link rel="prev" href="{{ page.previous.path|resolveFile }}" />
+    {% endif %}
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ "gitbook.js"|resolveAsset }}"></script>
+    <script src="{{ "theme.js"|resolveAsset }}"></script>
+    {% for resource in plugins.resources.js %}
+        {% if resource.url %}
+        <script src="{{ resource.url }}"></script>
+        {% else %}
+        <script src="{{ resource.path|resolveAsset }}"></script>
+        {% endif %}
+    {% endfor %}
+    {% if book.hm and book.hm[0] and book.hm[0].src %}
+      <script src="{{ book.hm[0].src }}"></script>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+<div class="doc {% if book.search.enable === true %}doc--hassearch{% endif %}">
+    <header class="doc-header">
+        <div class="doc-header__inner">
+            <a class="doc-title" href="/" title="返回首页">
+                <span class="doc-title__logo"></span>
+                <span class="doc-title__sub">开放平台</span>
+            </a>
+            <ul class="doc-header-nav">
+                {% for mainNav in book.navigation %}
+                {% if mainNav.children %}<li class="has-submenu">{% else %}<li>
+                {% endif %}
+                    {% if mainNav.url %}
+                      <a href="{{mainNav.url}}" target="{{ mainNav.target}}">{{ mainNav.text }}</a>
+                    {% else %}
+                      <span>{{ mainNav.text }}</span>
+                    {% endif %}
+                    {% if mainNav.children %}
+                        <ul class="doc-header-nav__sub">
+                            {% for subNav in mainNav.children %}
+                            <li>
+                                <a href="{{subNav.url}}" target="{{ subNav.target}}">{{ subNav.text }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+            <span class="doc-header-links">
+                {% for link in book.links %}
+                    <a class="doc-header-links__item" href="{{link.url}}" target="{{ link.target}}">{{ link.text }}</a>
+                {% endfor %}
+            </span>
+        </div>
+    </header>
+    {% if book.search and book.search.enable === true %}
+    <div class="doc-search">
+        <form class="doc-searchbox" action="{{ book.search.url }}" method="get" target="_self">
+            <input class="doc-searchbox__input" name="keyword" type="text" placeholder="请输入搜索关键词">
+            <input class="doc-searchbox__submit" type="submit" value="搜索">
+        </form>
+    </div>
+    {% endif %}
+    <div class="doc-container doc-book">
+        <div class="doc-book__main">
+            <div class="doc-book__sidebar">
+                <div class="doc-book__sidebar-fixed">
+                    {% block book_sidebar %}
+                        {% block search_input %}{% endblock %}
+                        {% block book_summary %}
+                            {% include "./summary.html" %}
+                        {% endblock %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="doc-book__container book">
+                <div class="doc-book__crumb"></div>
+                {% block book_body %}
+                    <div class="doc-book__content">
+                        {% block book_inner %}
+                            {% block search_results %}
+                                <section class="normal markdown-section">
+                                {% block page %}
+                                {{ page.content|safe }}
+                                {% endblock %}
+                                </section>
+                            {% endblock %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+                <textarea id="hiddenSummaryData" style="display: none;">{% include "./summary_all.html" %}</textarea>
+                <script>
+                    if (window.GITBOOK_PAGE_CHANGE) {
+                        window.GITBOOK_PAGE_CHANGE({{ template.getJSContext()|dump|safe }})
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <footer class="doc-footer">
+        <div class="doc-copyright">Copyright @ 2019 深圳市明源云集团　粤ICP备12059233号</div>
+    </footer>
+</div>
+<script>
+    var gitbook = gitbook || [];
+    gitbook.push(function() {
+        gitbook.page.hasChanged({{ template.getJSContext()|dump|safe }});
+    });
+</script>
+{% endblock %}

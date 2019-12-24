@@ -1,0 +1,18 @@
+{
+  "author": "",
+  "dependencies": {},
+  "description": "gitbook-plugin-theme-document",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "gitbook-plugin-theme-document",
+  "optionalDependencies": {},
+  "readme": "gitbook-plugin-theme-document\r\n",
+  "readmeFilename": "README.md",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.41"
+}

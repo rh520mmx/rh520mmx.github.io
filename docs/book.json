@@ -1,0 +1,17 @@
+{
+  "title": "md",
+  "styles": {},
+  "plugins": [
+    "-search",
+    "-lunr",
+    "-sharing",
+    "-fontsettings",
+    "todo",
+    "-highlight",
+    "sunlight-highlighter",
+    "hide-published-with",
+    "theme-document"
+  ],
+  "pluginsConfig": {
+  }
+}

@@ -27,6 +27,7 @@
       onGoMdEvent(){
         // this.$router.push(`${process.env.VUE_APP_BASE_API}/#/docs`)
         const domain = document.domain
+        console.log(domain);
         // this.$router.push(`${domain}/docs`)
         window.location.href = `${domain}/docs/README.html`
       },

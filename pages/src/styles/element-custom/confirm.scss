@@ -1,0 +1,82 @@
+// confirm提示框样式修改
+$otherColor: rgba(0,0,0,1);
+$otherBorder: rgba(217,217,217,1);
+.el-message-box__wrapper{
+  .el-message-box{
+    padding-bottom: 22px;
+    @include boxShadow($messageBoxShadow);
+    &.confirm-error{
+      .el-button--primary{
+        &.el-button--default{
+          background: rgba($otherColor, .04);
+          border-color: $otherBorder;
+          color: $errorColor;
+          &:hover{
+            background: rgba($errorColor, .7);
+            color: #fff;
+          }
+          &:active{
+            background: $errorColor;
+          }
+        }
+      }
+      .el-button--default{
+        &:hover {
+          color: rgba($errorColor, .7);
+          background: rgba($errorColor, .02);
+          border-color: rgba($errorColor, .5);
+        }
+      }
+    }
+    &.confirm-warning{
+      .el-button--default{
+        &:hover {
+          color: rgba($warningColor, .7);
+          background: rgba($warningColor, .02);
+          border-color: rgba($warningColor, .5);
+        }
+      }
+      .el-button--primary{
+        &.el-button--default {
+          background: rgba($otherColor, .04);
+          border-color: $otherBorder;
+          color: $warningColor;
+          &:hover{
+            background: rgba($warningColor, .7);
+            color: #fff;
+          }
+          &:active{
+            background:$warningColor;
+          }
+        }
+      }
+    }
+  }
+  .el-message-box__header{
+    padding: 24px 30px 10px 22px;
+  }
+  .el-message-box__title{
+    padding-left: 28px;
+    font-size:16px;
+    font-weight: bold;
+    color: $fontColorStrong;
+  }
+  .el-message-box__content{
+    padding: 0px 30px 22px 30px;
+    font-size:14px;
+    color: $fontColorBody;
+    .el-message-box__message{
+      padding-left: 21px;
+      -ms-word-break: break-all;
+      word-break: break-all;
+    }
+  }
+  .el-message-box__status{
+    top: -32px;
+    left: 18px;
+    @include transformMixin(unset);
+  }
+  .el-message-box__btns{
+    padding-top: 0;
+  }
+}

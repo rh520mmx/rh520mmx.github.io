@@ -1,0 +1,27 @@
+
+// navication 提示 样式
+.el-notification{
+  .el-notification__group{
+    width: 94%;
+    margin-left: 10px;
+    .el-notification__title{
+      @include textOverFlow;
+      font-size:16px;
+      font-weight: 900;
+      color: $fontColorStrong;
+      vertical-align: middle;
+    }
+    .notice-footer{
+      margin-top: 25px;
+      text-align: right;
+    }
+  }
+  .el-notification__icon{
+    @include transformMixin(translateY(-3px));
+  }
+  &.has-icon{
+    .el-notification__group{
+      width: 88%;
+    }
+  }
+}

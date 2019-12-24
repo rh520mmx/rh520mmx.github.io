@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= webpackConfig.name %></title>
+</head>
+<style lang="scss">
+  html,body,
+  .main-app{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .main-app .header{
+    width: 100%;
+    height: 56px;
+    background-color: #f4f5f9;
+  }
+  .main-app .left{
+    width: 178px;
+    height: 100%;
+    background-color: #f4f5f9;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .main-app .main-content{
+    background-color: #fff;
+    border: 1px solid #f4f5f9;
+    width: calc( 100% - 220px );
+    height: calc( 100% - 100px );
+    position: absolute;
+    top: 76px;
+    left: 193px;
+    overflow: hidden;
+  }
+  .main-app .plugin-section{
+    background-color: #f4f5f9;
+    width: 100%;
+    height: 22.5%;
+    margin-bottom: 2.5%;
+  }
+</style>
+<body>
+  <noscript>
+    <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div class="main-app"  id="app">
+    <div class="header"></div>
+    <div class="left"></div>
+    <div class="main-content">
+      <section class="plugin-section"></section>
+      <section class="plugin-section"></section>
+      <section class="plugin-section"></section>
+      <section class="plugin-section"></section>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+</html>

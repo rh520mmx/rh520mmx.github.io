@@ -1,0 +1,58 @@
+.el-step{
+  position: relative;
+  min-width: 120px;
+  margin-right: 15px !important;
+
+  .el-step__title{
+    color: #000;
+  }
+  .el-step__head{
+
+    .el-step__icon{
+      width: 32px;
+      height: 32px;
+      background-color: #1890FF;
+      color: #fff;
+      border: none;
+    }
+    .el-step__line{
+      top: 15px;
+      left: 32px;
+    }
+
+    &.is-wait{
+      .el-step__icon{
+        background-color: transparent;
+        border:1px solid rgba(0,0,0,0.15);
+        .el-step__icon-inner{
+          color:rgba(0,0,0,0.25);
+        }
+      }
+    }
+
+    &.is-success{
+      .el-step__icon{
+        color: #1890FF;
+        border: 1px solid #1890FF;
+        background-color: transparent;
+      }
+      .el-step__line{
+        background-color: #1890FF;
+      }
+    }
+  }
+
+  .el-step__main{
+    padding: 0 15px;
+    float: left;
+    position: absolute;
+    top: -3px;
+    left: 32px;
+    background: #fff;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}

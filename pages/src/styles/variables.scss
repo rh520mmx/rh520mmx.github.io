@@ -1,0 +1,75 @@
+// 默认主题色
+$themeColorGra: linear-gradient(90deg,rgba(31,91,211,1) 0%,rgba(15,163,223,1) 100%);
+$themeColor: #1890FF;
+$successColor: #52C41A;
+$warningColor: #FAAD14;
+$errorColor: #F5222D;
+$themeHoverColor: rgba($themeColor, .7);
+$themeActiveColor:  rgba($themeColor, 1);
+
+
+// 侧边栏
+$sideBarWidth: 178px;
+$sideBarWidthSmall: 54px;
+$sideBarHeight: 48px;
+$breadcrumbHeight: 48px; // 收缩按钮
+
+$navBarHeight: 56px;
+$navBoxShadow: 2px 0px 4px 0px rgba(155,155,155,0.2);
+
+// 侧边栏/面包屑背景色
+$barBgColor: #fff;
+$barColor: #fff;
+
+//阴影
+$barShadow: 2px 0px 8px 0px rgba(0,0,0,0.06) ;
+$messageBoxShadow: 0px 4px 12px 0px rgba(0,0,0,0.2);
+
+// 内外边距
+$padding: 20px;
+$margin: 16px;
+//div之间的边距
+$boxMargin: 10px;
+
+$dialogPadding: 22px;
+
+// dialog
+$dialogHeaderHeight: 56px;
+$dialogFooterHeight: 52px;
+
+// border
+$border: 1px solid rgba(233,233,233,1);
+
+// card-border-color
+$cardBorderColor: rgba(0,0,0,.09);
+
+// table
+$hearderBgColor: rgba(244,245,249,1);
+$borderColorTable: rgba(224,225,234,1);
+$pageFontColor: rgba(185,191,211,1);
+
+// border-radius
+$borderRadius: 4px;
+
+
+// 字体
+$fontColorStrong: rgba(0, 0, 0, .85); // 强调的文字
+$fontColorBody: rgba(0, 0, 0, .65); // 内容文字
+$fontColorSmall: rgba(0, 0, 0, .45); // 次要文字
+$fontColorDisabled: rgba(0, 0, 0, .25); // 不可用
+$fontWeight: 400; //正常
+$fontWeightStrong: 900; //正常
+$fontSize: 14px;
+
+// :export 导出当前定义的样式变量
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  themeColor: $themeColor;
+  themeColorGra: $themeColorGra;
+  themeHoverColor: $themeHoverColor;
+  themeActiveColor: $themeActiveColor;
+  sideBarWidth: $sideBarWidth;
+  sideBarHeight: $sideBarHeight;
+  breadcrumbHeight: $breadcrumbHeight;
+  navBarHeight: $navBarHeight;
+}

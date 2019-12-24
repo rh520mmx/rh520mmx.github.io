@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      title: '云运维客户中心',
+      title: '测试gitbook',
       logo,
       logoSmall,
     }

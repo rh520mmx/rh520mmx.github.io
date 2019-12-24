@@ -33,6 +33,7 @@
       onGoMdEvent1(){
         const domain = document.domain
         // this.$router.push(`${domain}/docs/doc/test1.html`)
+        console.log(domain);
         window.location.href = `${domain}/docs/doc/test1.html`
         // window.location.href = `/#/docs/doc/test1.html`
       },

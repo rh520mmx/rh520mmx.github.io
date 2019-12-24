@@ -6,7 +6,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = defaultSettings.title || '运维客服中心' // page title
+const name = defaultSettings.title || 'gitbook测试' // page title
 
 const port = process.env.port || process.env.npm_config_port || 9528 // dev port
 

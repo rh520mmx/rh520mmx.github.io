@@ -1,36 +1,409 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=icon href=/favicon.ico><title>测试gitbook</title><link href=/static/css/chunk-libs.3dfb7769.css rel=stylesheet><link href=/static/css/app.1d0b6a2b.css rel=stylesheet></head><style lang=scss>html,body,
-  .main-app{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  .main-app .header{
-    width: 100%;
-    height: 56px;
-    background-color: #f4f5f9;
-  }
-  .main-app .left{
-    width: 178px;
-    height: 100%;
-    background-color: #f4f5f9;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .main-app .main-content{
-    background-color: #fff;
-    border: 1px solid #f4f5f9;
-    width: calc( 100% - 220px );
-    height: calc( 100% - 100px );
-    position: absolute;
-    top: 76px;
-    left: 193px;
-    overflow: hidden;
-  }
-  .main-app .plugin-section{
-    background-color: #f4f5f9;
-    width: 100%;
-    height: 22.5%;
-    margin-bottom: 2.5%;
-  }</style><body><noscript><strong>We're sorry but 测试gitbook doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class=main-app id=app><div class=header></div><div class=left></div><div class=main-content><section class=plugin-section></section><section class=plugin-section></section><section class=plugin-section></section><section class=plugin-section></section></div></div><script>(function(e){function t(t){for(var r,o,a=t[0],i=t[1],f=t[2],l=0,d=[];l<a.length;l++)o=a[l],u[o]&&d.push(u[o][0]),u[o]=0;for(r in i)Object.prototype.hasOwnProperty.call(i,r)&&(e[r]=i[r]);s&&s(t);while(d.length)d.shift()();return c.push.apply(c,f||[]),n()}function n(){for(var e,t=0;t<c.length;t++){for(var n=c[t],r=!0,o=1;o<n.length;o++){var a=n[o];0!==u[a]&&(r=!1)}r&&(c.splice(t--,1),e=i(i.s=n[0]))}return e}var r={},o={runtime:0},u={runtime:0},c=[];function a(e){return i.p+"static/js/"+({}[e]||e)+"."+{"chunk-17cee5c8":"547d7132","chunk-203ba782":"f61acfc1","chunk-54b1fd14":"38093128","chunk-7170dc4d":"563dab23","chunk-d225bc50":"b426ad86"}[e]+".js"}function i(t){if(r[t])return r[t].exports;var n=r[t]={i:t,l:!1,exports:{}};return e[t].call(n.exports,n,n.exports,i),n.l=!0,n.exports}i.e=function(e){var t=[],n={"chunk-17cee5c8":1,"chunk-203ba782":1,"chunk-7170dc4d":1,"chunk-d225bc50":1};o[e]?t.push(o[e]):0!==o[e]&&n[e]&&t.push(o[e]=new Promise((function(t,n){for(var r="static/css/"+({}[e]||e)+"."+{"chunk-17cee5c8":"f24a7df6","chunk-203ba782":"b3b7413f","chunk-54b1fd14":"31d6cfe0","chunk-7170dc4d":"ff20f04b","chunk-d225bc50":"dee5a93a"}[e]+".css",u=i.p+r,c=document.getElementsByTagName("link"),a=0;a<c.length;a++){var f=c[a],l=f.getAttribute("data-href")||f.getAttribute("href");if("stylesheet"===f.rel&&(l===r||l===u))return t()}var d=document.getElementsByTagName("style");for(a=0;a<d.length;a++){f=d[a],l=f.getAttribute("data-href");if(l===r||l===u)return t()}var s=document.createElement("link");s.rel="stylesheet",s.type="text/css",s.onload=t,s.onerror=function(t){var r=t&&t.target&&t.target.src||u,c=new Error("Loading CSS chunk "+e+" failed.\n("+r+")");c.code="CSS_CHUNK_LOAD_FAILED",c.request=r,delete o[e],s.parentNode.removeChild(s),n(c)},s.href=u;var h=document.getElementsByTagName("head")[0];h.appendChild(s)})).then((function(){o[e]=0})));var r=u[e];if(0!==r)if(r)t.push(r[2]);else{var c=new Promise((function(t,n){r=u[e]=[t,n]}));t.push(r[2]=c);var f,l=document.createElement("script");l.charset="utf-8",l.timeout=120,i.nc&&l.setAttribute("nonce",i.nc),l.src=a(e),f=function(t){l.onerror=l.onload=null,clearTimeout(d);var n=u[e];if(0!==n){if(n){var r=t&&("load"===t.type?"missing":t.type),o=t&&t.target&&t.target.src,c=new Error("Loading chunk "+e+" failed.\n("+r+": "+o+")");c.type=r,c.request=o,n[1](c)}u[e]=void 0}};var d=setTimeout((function(){f({type:"timeout",target:l})}),12e4);l.onerror=l.onload=f,document.head.appendChild(l)}return Promise.all(t)},i.m=e,i.c=r,i.d=function(e,t,n){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},i.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(i.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)i.d(n,r,function(t){return e[t]}.bind(null,r));return n},i.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/",i.oe=function(e){throw console.error(e),e};var f=window["webpackJsonp"]=window["webpackJsonp"]||[],l=f.push.bind(f);f.push=t,f=f.slice();for(var d=0;d<f.length;d++)t(f[d]);var s=l;n()})([]);</script><script src=/static/js/chunk-elementUI.77c50b97.js></script><script src=/static/js/chunk-libs.376625c1.js></script><script src=/static/js/app.7da73ed8.js></script></body></html>
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · md</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sunlight-highlighter/sunlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-document/featherlight.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-document/document.css">
+                
+            
+        
+
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    
+    <link rel="next" href="doc/test1.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="doc ">
+    <header class="doc-header">
+        <div class="doc-header__inner">
+            <a class="doc-title" href="/" title="返回首页">
+                <span class="doc-title__logo"></span>
+                <span class="doc-title__sub">开放平台</span>
+            </a>
+            <ul class="doc-header-nav">
+                
+            </ul>
+            <span class="doc-header-links">
+                
+            </span>
+        </div>
+    </header>
+    
+    <div class="doc-container doc-book">
+        <div class="doc-book__main">
+            <div class="doc-book__sidebar">
+                <div class="doc-book__sidebar-fixed">
+                    
+                        
+                        
+                            
+
+
+<div class="doc-book-summary">
+    <div class="doc-book-summary__select">
+        <div class="doc-book-summary__select-handle">全部文档</div>
+        <ul class="doc-book-summary__select-list">
+            
+                
+                    
+                
+                    
+                        <li class="doc-book-summary__select-item">
+                            
+                                <a
+                                  href="doc/test1.html"
+                                  data-url="doc/test1.md"
+                                >一级标题</a>
+                            
+                            
+                        </li>
+                    
+                
+                    
+                        <li class="doc-book-summary__select-item">
+                            
+                                <a
+                                  href="doc/test2.html"
+                                  data-url="doc/test2.md"
+                                >一级标题</a>
+                            
+                            
+                        </li>
+                    
+                
+                    
+                        <li class="doc-book-summary__select-item">
+                            
+                                <a
+                                  href="doc/test3.html"
+                                  data-url="doc/test3.md"
+                                >一级标题</a>
+                            
+                            
+                        </li>
+                    
+                
+            
+        </ul>
+    </div>
+    <div class="doc-book-summary__wrap">
+        <ul class="summary">
+            
+            
+            
+            
+                
+                
+                    
+                        
+                        
+                        
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+            
+            
+    
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        <li
+            class="doc-book-summary__item chapter   "
+                data-level="1.2"
+
+            
+                data-path="doc/test1.html"
+                data-href="doc/test1.html"
+                data-url="doc/test1.md"
+                ><a class="doc-book-summary__handle" title="一级标题" href="doc/test1.html">
+            
+                
+                <span class="doc-book-summary__text">一级标题</span>
+            </a>
+            
+        </li>
+        
+    
+        
+        
+        
+        
+        
+        <li
+            class="doc-book-summary__item chapter   "
+                data-level="1.3"
+
+            
+                data-path="doc/test2.html"
+                data-href="doc/test2.html"
+                data-url="doc/test2.md"
+                ><a class="doc-book-summary__handle" title="一级标题" href="doc/test2.html">
+            
+                
+                <span class="doc-book-summary__text">一级标题</span>
+            </a>
+            
+        </li>
+        
+    
+        
+        
+        
+        
+        
+        <li
+            class="doc-book-summary__item chapter   "
+                data-level="1.4"
+
+            
+                data-path="doc/test3.html"
+                data-href="doc/test3.html"
+                data-url="doc/test3.md"
+                ><a class="doc-book-summary__handle" title="一级标题" href="doc/test3.html">
+            
+                
+                <span class="doc-book-summary__text">一级标题</span>
+            </a>
+            
+        </li>
+        
+    
+
+        </ul>
+    </div>
+</div>
+
+
+                        
+                    
+                </div>
+            </div>
+            <div class="doc-book__container book">
+                <div class="doc-book__crumb"></div>
+                
+                    <div class="doc-book__content">
+                        
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="introduction">Introduction</h1>
+
+                                
+                                </section>
+                            
+                        
+                    </div>
+                
+                <textarea id="hiddenSummaryData" style="display: none;">
+
+
+<div class="doc-book-summary">
+  <ul class="summary">
+      
+          
+    
+        
+        
+        
+        <li
+            class="doc-book-summary__item chapter is-active  "
+                data-level="1.1"
+
+            
+                data-path="./"
+                data-href="./"
+                data-url="README.md"
+                ><a class="doc-book-summary__handle" title="Introduction" href="./">
+            
+                
+                    <span class="doc-book-summary__indent"></span>
+                
+                <span class="doc-book-summary__text">Introduction</span>
+            </a>
+            
+        </li>
+    
+        
+        
+        
+        <li
+            class="doc-book-summary__item chapter   "
+                data-level="1.2"
+
+            
+                data-path="doc/test1.html"
+                data-href="doc/test1.html"
+                data-url="doc/test1.md"
+                ><a class="doc-book-summary__handle" title="一级标题" href="doc/test1.html">
+            
+                
+                    <span class="doc-book-summary__indent"></span>
+                
+                <span class="doc-book-summary__text">一级标题</span>
+            </a>
+            
+        </li>
+    
+        
+        
+        
+        <li
+            class="doc-book-summary__item chapter   "
+                data-level="1.3"
+
+            
+                data-path="doc/test2.html"
+                data-href="doc/test2.html"
+                data-url="doc/test2.md"
+                ><a class="doc-book-summary__handle" title="一级标题" href="doc/test2.html">
+            
+                
+                    <span class="doc-book-summary__indent"></span>
+                
+                <span class="doc-book-summary__text">一级标题</span>
+            </a>
+            
+        </li>
+    
+        
+        
+        
+        <li
+            class="doc-book-summary__item chapter   "
+                data-level="1.4"
+
+            
+                data-path="doc/test3.html"
+                data-href="doc/test3.html"
+                data-url="doc/test3.md"
+                ><a class="doc-book-summary__handle" title="一级标题" href="doc/test3.html">
+            
+                
+                    <span class="doc-book-summary__indent"></span>
+                
+                <span class="doc-book-summary__text">一级标题</span>
+            </a>
+            
+        </li>
+    
+
+      
+  </ul>
+</div>
+
+</textarea>
+                <script>
+                    if (window.GITBOOK_PAGE_CHANGE) {
+                        window.GITBOOK_PAGE_CHANGE({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"一级标题","level":"1.2","depth":1,"path":"doc/test1.md","ref":"./doc/test1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-fontsettings","todo","-highlight","sunlight-highlighter","hide-published-with","back-to-top-button","theme-document","livereload"],"styles":{},"pluginsConfig":{"todo":{},"sunlight-highlighter":{"lineNumbers":false,"theme":"gitbook"},"hide-published-with":{},"back-to-top-button":{},"livereload":{},"theme-document":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"md","gitbook":"*"},"file":{"path":"README.md","mtime":"2019-12-24T03:33:24.006Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-25T07:01:54.134Z"},"basePath":".","book":{"language":""}})
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <footer class="doc-footer">
+        <div class="doc-copyright">Copyright @ 2019 深圳市明源云集团　粤ICP备12059233号</div>
+    </footer>
+</div>
+<script>
+    var gitbook = gitbook || [];
+    gitbook.push(function() {
+        gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"一级标题","level":"1.2","depth":1,"path":"doc/test1.md","ref":"./doc/test1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-fontsettings","todo","-highlight","sunlight-highlighter","hide-published-with","back-to-top-button","theme-document","livereload"],"styles":{},"pluginsConfig":{"todo":{},"sunlight-highlighter":{"lineNumbers":false,"theme":"gitbook"},"hide-published-with":{},"back-to-top-button":{},"livereload":{},"theme-document":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"md","gitbook":"*"},"file":{"path":"README.md","mtime":"2019-12-24T03:33:24.006Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-25T07:01:54.134Z"},"basePath":".","book":{"language":""}});
+    });
+</script>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-document/vue.runtime.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-document/docComponent.umd.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-document/featherlight.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-document/document.js"></script>
+        
+    
+    
+
+    </body>
+</html>
+

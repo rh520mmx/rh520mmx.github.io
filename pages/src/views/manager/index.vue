@@ -28,7 +28,7 @@
         // this.$router.push(`${domain}/docs/doc/test1.html`)
         console.log(domain);
         // window.location.href = `https://${domain}/doc/test1.html`
-        window.location.href = `https://${domain}/_book`
+        window.location.href = `https://${domain}/testDocs`
       },
     },
   }

@@ -27,7 +27,7 @@
         const domain = document.domain
         // this.$router.push(`${domain}/docs/doc/test1.html`)
         console.log(domain);
-        window.location.href = `https://${domain}/doc/test1.html`
+        window.location.href = `https://${domain}/docs/doc/test1.html`
       },
     },
   }

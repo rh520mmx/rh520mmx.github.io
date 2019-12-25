@@ -10,6 +10,7 @@
     "-highlight",
     "sunlight-highlighter",
     "hide-published-with",
+    "back-to-top-button",
     "theme-document"
   ],
   "pluginsConfig": {

@@ -44,14 +44,13 @@ require(['gitbook'], function(gitbook) {
       this.updateSidebarFixed()
     },
     updateSidebarFixed: function () {
-      var top = this.$sidebar.offset().top
-      if (top < 0) {
+      let top = this.$sidebar.offset().top
+
+      if ($document.scrollTop() > top) {
         top = 0
       }
-      var height = Math.min($window.height(), this.$container.offset().top + this.$container.outerHeight() - $document.scrollTop()) - top + 'px'
       this.$sidebarFixed.css({
-        'top': top,
-        'height': height
+        'top': top
       })
     },
     destroy: function () {
@@ -191,6 +190,8 @@ require(['gitbook'], function(gitbook) {
     bindMember: function () {
       this.$crumb = null
       this.$crumbWrap = $('.doc-book__crumb')
+      this.$docNavLists = $('#doc-nav__lists')
+      this.$docRightNavList = $('#doc-book__rightnav')
       this.$content = $('.doc-book__content')
       this.$anchorItems = null
       this.$anchorHandle = null
@@ -250,8 +251,8 @@ require(['gitbook'], function(gitbook) {
       }).toArray()
       result.unshift({
         type: 'link',
-        url: '/docs',
-        text: '开发文档'
+        url: '/#/devGuide/index',
+        text: '开发指南'
       })
       var anchors = this.$content.find('h2').map(function(i, v){
         var $v = $(v)
@@ -260,7 +261,9 @@ require(['gitbook'], function(gitbook) {
           text: $v.text()
         }
       }).toArray()
+      this.$docRightNavList.hide()
       if (anchors.length) {
+        this.$docRightNavList.show()
         result.push({
           type: 'anchor',
           text: '本页导航',
@@ -299,11 +302,21 @@ require(['gitbook'], function(gitbook) {
     },
     renderCrumbHtml: function () {
       var html = '<div class="doc-book-crumb">'
+      let nav = '<div class="doc-book-anchor__list">'
       $.each(this.getCrumbData(), function (i, v) {
         if (v.type === 'link') {
           html += '<a class="doc-book-crumb__item doc-book-link" href="' + v.url + '">' + v.text + '</a>'
-          html += '<i class="doc-book-crumb__line"></i>'
+          html += '<span class="doc-book-crumb__line"> > </span>'
         } else if (v.type === 'anchor') {
+
+          nav += '<ul class="doc-book-anchor__list">'
+            $.each(v.items, function(ii, vv) {
+              nav += '<li class="doc-book-anchor__item " title='+ (ii + 1) +'.'+ vv.text +'>'
+              nav += '<a class="doc-book-anchor__item-text" href="#'+ vv.url +'">'+ (ii + 1) +'.'+ vv.text + '</a>'
+              nav += '</li>'
+            })
+          nav += '</ul>'
+
           html += '<span class="doc-book-crumb__item doc-book-anchor">'
             html += '<span class="doc-book-anchor__handle">'+ v.text +'</span>'
             html += '<ul class="doc-book-anchor__list">'
@@ -317,7 +330,9 @@ require(['gitbook'], function(gitbook) {
         }
       })
       html += '</div>'
+
       this.$crumbWrap.html(html)
+      this.$docNavLists.html(nav)
       this.$crumb = this.$crumbWrap.find('> .doc-book-crumb')
       this.$anchorItems = $('.doc-book-anchor__item')
       this.$anchorHandle = $('.doc-book-anchor__handle')
@@ -386,10 +401,8 @@ require(['gitbook'], function(gitbook) {
     $articleComment: null,
     init: function () {
       $(".doc-book__content img").featherlight({targetAttr:"src"})
-      // 评论
-      this.createCommentMount()
-      // 浏览数
-      this.doArticleBrowse()
+      // this.createCommentMount()
+      // this.doArticleBrowse()
     },
     createCommentMount: function () {
       var me = this
@@ -434,7 +447,6 @@ require(['gitbook'], function(gitbook) {
       this.articleComment = $vue
       this.$articleComment = $mountP
     },
-    // 反馈
     doArticleFeedback: function (data) {
       return $.ajax({
         url: gitbook.state.config.apiHost + '/article/feedback',
@@ -444,7 +456,6 @@ require(['gitbook'], function(gitbook) {
         })
       })
     },
-    // 赞
     doArticleGood: function () {
       return $.ajax({
         url: gitbook.state.config.apiHost + '/article/good',
@@ -454,7 +465,6 @@ require(['gitbook'], function(gitbook) {
         }
       })
     },
-    // 踩
     doArticleBad: function () {
       return $.ajax({
         url: gitbook.state.config.apiHost + '/article/bad',
@@ -464,7 +474,6 @@ require(['gitbook'], function(gitbook) {
         }
       })
     },
-    // 浏览数
     doArticleBrowse: function () {
       return $.ajax({
         url: gitbook.state.config.apiHost + '/article/browse',

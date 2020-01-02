@@ -1,35 +1,56 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=icon href=/favicon.ico><title>明源云运维业务中台</title><link href=/static/css/chunk-elementUI.397259f5.css rel=stylesheet><link href=/static/css/chunk-libs.3dfb7769.css rel=stylesheet><link href=/static/css/app.ffa2697f.css rel=stylesheet></head><style lang=scss>html,body,
-  .main-app{
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=icon href=/favicon.ico><title>组件文档</title><link href=/static/css/chunk-libs.3dfb7769.css rel=stylesheet><link href=/static/css/app.b65d8876.css rel=stylesheet></head><style lang=scss>html,body{
+    width: 100%;
+    height: 100%;
+  }
+  .first-loading{
     width: 100%;
     height: 100%;
     position: relative;
   }
-  .main-app .header{
-    width: 100%;
-    height: 56px;
-    background-color: #f4f5f9;
+  .first-loading .loading{
+    width: 80px;
+    height: 40px;
+    /*margin: 0 auto;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -50%);
   }
-  .main-app .left{
-    width: 178px;
+  .first-loading .loading span{
+    display: inline-block;
+    width: 8px;
     height: 100%;
-    background-color: #f4f5f9;
-    position: absolute;
-    left: 0;
-    top: 0;
+    border-radius: 4px;
+    background: #27AAE7;
+    -webkit-animation: load 1s ease infinite;
   }
-  .main-app .main-content{
-    background-color: #fff;
-    border: 1px solid #f4f5f9;
-    width: calc( 100% - 220px );
-    height: calc( 100% - 100px );
-    position: absolute;
-    top: 76px;
-    left: 193px;
-    overflow: hidden;
+  .first-loading .loading-text{
+    white-space: nowrap;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #222222;
+    transform: translateX(-20px);
   }
-  .main-app .plugin-section{
-    background-color: #f4f5f9;
-    width: 100%;
-    height: 22.5%;
-    margin-bottom: 2.5%;
-  }</style><body><noscript><strong>We're sorry but 明源云运维业务中台 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class=main-app id=app><div class=header></div><div class=left></div><div class=main-content><section class=plugin-section></section><section class=plugin-section></section><section class=plugin-section></section><section class=plugin-section></section></div></div><script>(function(e){function t(t){for(var r,a,o=t[0],i=t[1],d=t[2],f=0,l=[];f<o.length;f++)a=o[f],u[a]&&l.push(u[a][0]),u[a]=0;for(r in i)Object.prototype.hasOwnProperty.call(i,r)&&(e[r]=i[r]);s&&s(t);while(l.length)l.shift()();return c.push.apply(c,d||[]),n()}function n(){for(var e,t=0;t<c.length;t++){for(var n=c[t],r=!0,a=1;a<n.length;a++){var o=n[a];0!==u[o]&&(r=!1)}r&&(c.splice(t--,1),e=i(i.s=n[0]))}return e}var r={},a={runtime:0},u={runtime:0},c=[];function o(e){return i.p+"static/js/"+({}[e]||e)+"."+{"chunk-203ba782":"0d2325aa","chunk-2d0b349b":"11188754","chunk-6e531440":"4f2ea09c","chunk-0cd8d02d":"40257580","chunk-af238438":"6ee7d1e0","chunk-7170dc4d":"af6a307e","chunk-79e1c6e0":"f99f8a34","chunk-d900a8a6":"e0ff1aba"}[e]+".js"}function i(t){if(r[t])return r[t].exports;var n=r[t]={i:t,l:!1,exports:{}};return e[t].call(n.exports,n,n.exports,i),n.l=!0,n.exports}i.e=function(e){var t=[],n={"chunk-203ba782":1,"chunk-6e531440":1,"chunk-0cd8d02d":1,"chunk-af238438":1,"chunk-7170dc4d":1,"chunk-79e1c6e0":1,"chunk-d900a8a6":1};a[e]?t.push(a[e]):0!==a[e]&&n[e]&&t.push(a[e]=new Promise((function(t,n){for(var r="static/css/"+({}[e]||e)+"."+{"chunk-203ba782":"21a0a33d","chunk-2d0b349b":"31d6cfe0","chunk-6e531440":"80d0a378","chunk-0cd8d02d":"05e31766","chunk-af238438":"bcfd9cb2","chunk-7170dc4d":"f54af9cc","chunk-79e1c6e0":"a4fce19b","chunk-d900a8a6":"19b6b264"}[e]+".css",u=i.p+r,c=document.getElementsByTagName("link"),o=0;o<c.length;o++){var d=c[o],f=d.getAttribute("data-href")||d.getAttribute("href");if("stylesheet"===d.rel&&(f===r||f===u))return t()}var l=document.getElementsByTagName("style");for(o=0;o<l.length;o++){d=l[o],f=d.getAttribute("data-href");if(f===r||f===u)return t()}var s=document.createElement("link");s.rel="stylesheet",s.type="text/css",s.onload=t,s.onerror=function(t){var r=t&&t.target&&t.target.src||u,c=new Error("Loading CSS chunk "+e+" failed.\n("+r+")");c.code="CSS_CHUNK_LOAD_FAILED",c.request=r,delete a[e],s.parentNode.removeChild(s),n(c)},s.href=u;var h=document.getElementsByTagName("head")[0];h.appendChild(s)})).then((function(){a[e]=0})));var r=u[e];if(0!==r)if(r)t.push(r[2]);else{var c=new Promise((function(t,n){r=u[e]=[t,n]}));t.push(r[2]=c);var d,f=document.createElement("script");f.charset="utf-8",f.timeout=120,i.nc&&f.setAttribute("nonce",i.nc),f.src=o(e),d=function(t){f.onerror=f.onload=null,clearTimeout(l);var n=u[e];if(0!==n){if(n){var r=t&&("load"===t.type?"missing":t.type),a=t&&t.target&&t.target.src,c=new Error("Loading chunk "+e+" failed.\n("+r+": "+a+")");c.type=r,c.request=a,n[1](c)}u[e]=void 0}};var l=setTimeout((function(){d({type:"timeout",target:f})}),12e4);f.onerror=f.onload=d,document.head.appendChild(f)}return Promise.all(t)},i.m=e,i.c=r,i.d=function(e,t,n){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},i.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(i.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)i.d(n,r,function(t){return e[t]}.bind(null,r));return n},i.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/",i.oe=function(e){throw console.error(e),e};var d=window["webpackJsonp"]=window["webpackJsonp"]||[],f=d.push.bind(d);d.push=t,d=d.slice();for(var l=0;l<d.length;l++)t(d[l]);var s=f;n()})([]);</script><script src=/static/js/chunk-elementUI.77c50b97.js></script><script src=/static/js/chunk-libs.fb37ba58.js></script><script src=/static/js/app.0c280929.js></script></body></html>
+  @-webkit-keyframes load{
+    0%,100%{
+      height: 40px;
+      background: #27AAE7;
+    }
+    50%{
+      height: 70px;
+      margin: -15px 0;
+      background: rgba(39,170,231,.7);
+    }
+  }
+  .first-loading .loading span:nth-child(2){
+    -webkit-animation-delay:0.2s;
+  }
+  .first-loading .loading span:nth-child(3){
+    -webkit-animation-delay:0.4s;
+  }
+  .first-loading .loading span:nth-child(4){
+    -webkit-animation-delay:0.6s;
+  }
+  .first-loading .loading span:nth-child(5){
+    -webkit-animation-delay:0.8s;
+  }</style><body><noscript><strong>We're sorry but 组件文档 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class=first-loading id=app><div class=loading><span></span> <span></span> <span></span> <span></span> <span></span><div class=loading-text>页面拼命加载中...</div></div></div><script src=/static/js/chunk-elementUI.3c5ba3d6.js></script><script src=/static/js/chunk-libs.5384b2cf.js></script><script>(function(e){function n(n){for(var r,c,a=n[0],o=n[1],i=n[2],h=0,d=[];h<a.length;h++)c=a[h],u[c]&&d.push(u[c][0]),u[c]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(e[r]=o[r]);l&&l(n);while(d.length)d.shift()();return f.push.apply(f,i||[]),t()}function t(){for(var e,n=0;n<f.length;n++){for(var t=f[n],r=!0,c=1;c<t.length;c++){var a=t[c];0!==u[a]&&(r=!1)}r&&(f.splice(n--,1),e=o(o.s=t[0]))}return e}var r={},c={runtime:0},u={runtime:0},f=[];function a(e){return o.p+"static/js/"+({}[e]||e)+"."+{"chunk-24f6eff1":"62bf5628","chunk-4d897768":"2ae1b7de","chunk-67de81b6":"407bfa01","chunk-68697b0f":"94f3f14f","chunk-7149efaf":"bc8ba794","chunk-792e7b3a":"26abcc16","chunk-7a419fb4":"747a4919","chunk-7ce76d30":"9df20f5d","chunk-a11b55fc":"24ed90a6","chunk-b6906768":"fde84ff7","chunk-c9ef3ed8":"88608de6","chunk-eb274946":"21336c45","chunk-d636d46e":"6f12ad16","chunk-f5c4e584":"0f35eba7"}[e]+".js"}function o(n){if(r[n])return r[n].exports;var t=r[n]={i:n,l:!1,exports:{}};return e[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.e=function(e){var n=[],t={"chunk-24f6eff1":1,"chunk-4d897768":1,"chunk-67de81b6":1,"chunk-68697b0f":1,"chunk-7149efaf":1,"chunk-792e7b3a":1,"chunk-7a419fb4":1,"chunk-7ce76d30":1,"chunk-a11b55fc":1,"chunk-b6906768":1,"chunk-c9ef3ed8":1,"chunk-eb274946":1,"chunk-d636d46e":1,"chunk-f5c4e584":1};c[e]?n.push(c[e]):0!==c[e]&&t[e]&&n.push(c[e]=new Promise((function(n,t){for(var r="static/css/"+({}[e]||e)+"."+{"chunk-24f6eff1":"120f96eb","chunk-4d897768":"7686f9b0","chunk-67de81b6":"89f55284","chunk-68697b0f":"5e9c0b21","chunk-7149efaf":"a723c172","chunk-792e7b3a":"6f457a9f","chunk-7a419fb4":"a16c1829","chunk-7ce76d30":"47cba135","chunk-a11b55fc":"fe60d872","chunk-b6906768":"163809bd","chunk-c9ef3ed8":"b40d30c5","chunk-eb274946":"133d8cdc","chunk-d636d46e":"64fe86bc","chunk-f5c4e584":"83b33007"}[e]+".css",u=o.p+r,f=document.getElementsByTagName("link"),a=0;a<f.length;a++){var i=f[a],h=i.getAttribute("data-href")||i.getAttribute("href");if("stylesheet"===i.rel&&(h===r||h===u))return n()}var d=document.getElementsByTagName("style");for(a=0;a<d.length;a++){i=d[a],h=i.getAttribute("data-href");if(h===r||h===u)return n()}var l=document.createElement("link");l.rel="stylesheet",l.type="text/css",l.onload=n,l.onerror=function(n){var r=n&&n.target&&n.target.src||u,f=new Error("Loading CSS chunk "+e+" failed.\n("+r+")");f.code="CSS_CHUNK_LOAD_FAILED",f.request=r,delete c[e],l.parentNode.removeChild(l),t(f)},l.href=u;var s=document.getElementsByTagName("head")[0];s.appendChild(l)})).then((function(){c[e]=0})));var r=u[e];if(0!==r)if(r)n.push(r[2]);else{var f=new Promise((function(n,t){r=u[e]=[n,t]}));n.push(r[2]=f);var i,h=document.createElement("script");h.charset="utf-8",h.timeout=120,o.nc&&h.setAttribute("nonce",o.nc),h.src=a(e),i=function(n){h.onerror=h.onload=null,clearTimeout(d);var t=u[e];if(0!==t){if(t){var r=n&&("load"===n.type?"missing":n.type),c=n&&n.target&&n.target.src,f=new Error("Loading chunk "+e+" failed.\n("+r+": "+c+")");f.type=r,f.request=c,t[1](f)}u[e]=void 0}};var d=setTimeout((function(){i({type:"timeout",target:h})}),12e4);h.onerror=h.onload=i,document.head.appendChild(h)}return Promise.all(n)},o.m=e,o.c=r,o.d=function(e,n,t){o.o(e,n)||Object.defineProperty(e,n,{enumerable:!0,get:t})},o.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},o.t=function(e,n){if(1&n&&(e=o(e)),8&n)return e;if(4&n&&"object"===typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(o.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&n&&"string"!=typeof e)for(var r in e)o.d(t,r,function(n){return e[n]}.bind(null,r));return t},o.n=function(e){var n=e&&e.__esModule?function(){return e["default"]}:function(){return e};return o.d(n,"a",n),n},o.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},o.p="/",o.oe=function(e){throw console.error(e),e};var i=window["webpackJsonp"]=window["webpackJsonp"]||[],h=i.push.bind(i);i.push=n,i=i.slice();for(var d=0;d<i.length;d++)n(i[d]);var l=h;t()})([]);</script><script src=/static/js/app.4ad5e45f.js></script></body></html>
